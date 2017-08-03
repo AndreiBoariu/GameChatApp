@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyryght 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ld1-Il-Cp4">
+                                <rect key="frame" x="67" y="559" width="467" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EoI-73-xiT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vertx_splash_logo" translatesAutoresizingMaskIntoConstraints="NO" id="w4T-gO-3Id">
+                                <rect key="frame" x="113" y="111" width="375" height="378"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.047058823529411764" green="0.12156862745098039" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="w4T-gO-3Id" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="5LO-Sh-g8E"/>
+                            <constraint firstItem="ld1-Il-Cp4" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="67" id="Cdq-s3-cwF"/>
+                            <constraint firstAttribute="trailing" secondItem="ld1-Il-Cp4" secondAttribute="trailing" constant="66" id="Y4V-wG-NmJ"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ld1-Il-Cp4" secondAttribute="bottom" constant="20" id="iO1-WC-gKJ"/>
+                            <constraint firstItem="w4T-gO-3Id" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="wz3-v7-e8A"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="43" y="124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="vertx_splash_logo" width="375" height="378"/>
+    </resources>
+</document>
