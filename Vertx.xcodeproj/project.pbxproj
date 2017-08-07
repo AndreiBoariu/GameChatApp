@@ -531,7 +531,7 @@
 				TargetAttributes = {
 					AF48D9D61D64BDE800683E6C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = J2U4YW39Q7;
+						DevelopmentTeam = 44WVVSJU55;
 						LastSwiftMigration = 0830;
 					};
 				};
@@ -814,6 +814,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Derek Nebel (X35U8N47CC)";
+				DEVELOPMENT_TEAM = 44WVVSJU55;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/Headers",
@@ -837,9 +838,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nebel.vertx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vima.mobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d7fe8959-4565-4ad6-8603-605ddfef3d43";
+				PROVISIONING_PROFILE = "e80aa77c-79e3-44a5-920c-a83825c41d63";
+				PROVISIONING_PROFILE_SPECIFIER = Vima_AdHoc;
 				SWIFT_OBJC_BRIDGING_HEADER = "Vertx/Vertx-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -851,6 +853,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Derek Nebel (J2U4YW39Q7)";
+				DEVELOPMENT_TEAM = 44WVVSJU55;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/Headers",
@@ -873,9 +876,10 @@
 				INFOPLIST_FILE = Vertx/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nebel.vertx;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vima.mobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "16c76e45-5e2d-4070-b69a-292012680b6d";
+				PROVISIONING_PROFILE = "e80aa77c-79e3-44a5-920c-a83825c41d63";
+				PROVISIONING_PROFILE_SPECIFIER = Vima_AdHoc;
 				SWIFT_OBJC_BRIDGING_HEADER = "Vertx/Vertx-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

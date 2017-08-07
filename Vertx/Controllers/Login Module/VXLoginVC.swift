@@ -118,7 +118,7 @@ class VXLoginVC: VXBaseVC {
                             KVNProgress.dismiss()
                             
                             if !user.isEmailVerified {
-                                Async.main(block: {
+                                Async.main {
                                     let alertVC = UIAlertController(title: "Oops", message: "Your email address has not yet been verified. \n Do you want us to send another verification email to `\(strEmail)`?", preferredStyle: .alert)
                                     let alertActionOkay = UIAlertAction(title: "Yes", style: .default) {
                                         (_) in
@@ -130,7 +130,7 @@ class VXLoginVC: VXBaseVC {
                                     alertVC.addAction(alertActionOkay)
                                     
                                     self.present(alertVC, animated: true, completion: nil)
-                                })
+                                }
                             }
                             else {
                                 
@@ -152,14 +152,14 @@ class VXLoginVC: VXBaseVC {
                                 
                                 KVNProgress.dismiss()
                                 
-                                Async.main(block: {
-                                    if error.code == 17009 {
+                                Async.main {
+                                    if error._code == 17009 {
                                         //=>    FIRAuthErrorCodeWrongPassword
                                         let alert = VertxUtils.okCustomAlert("Oops!", message: "Seems password is wrong. Please try again")
                                         self.present(alert, animated: true, completion: nil)
                                     }
                                     else
-                                        if error.code == 17011 {
+                                        if error._code == 17011 {
                                             //=>    FIRAuthErrorCodeUserNotFound
                                             let alert = VertxUtils.okCustomAlert("Oops!", message: "No user found with this email")
                                             self.present(alert, animated: true, completion: nil)
@@ -168,7 +168,7 @@ class VXLoginVC: VXBaseVC {
                                             let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while creating new user! Please try again! \n\n \(error.localizedDescription)")
                                             self.present(alert, animated: true, completion: nil)
                                         }
-                                })
+                                }
                         }
                     })
                 }

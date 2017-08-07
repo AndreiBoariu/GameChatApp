@@ -66,8 +66,8 @@ class VXAboutVC: VXBaseVC, MFMessageComposeViewControllerDelegate {
     
     // MARK: - MFMessageComposeViewControllerDelegate Methods
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-        switch(result.rawValue) {
-        case MessageComposeResultFailed.rawValue:
+        switch result {
+        case .failed:
             let alertView  = VertxUtils.okCustomAlert("Error", message: "Failed to send SMS.")
             self.present(alertView, animated: true, completion: nil)
         

@@ -167,7 +167,7 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
                     }
                 }
                 
-                Async.main(block: {
+                Async.main {
                     if self.bIsFeedAddedToFavorites {
                         self.btnEditFeed.setImage(UIImage(named: "remove_from_favorites"), for: UIControlState())
                     }
@@ -179,7 +179,7 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
                             self.btnEditFeed.setImage(UIImage(named: "edit_feed"), for: UIControlState())
                         }
                     }
-            })
+                }
         })
     }
     
@@ -200,14 +200,14 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
         }
         
         if let strImgUrl = currentFeed.imgURL, let urlImage = URL(string: strImgUrl) {
-            imgFeedImage.kf_showIndicatorWhenLoading = true
-            imgFeedImage.kf_indicatorType = .activity
-            imgFeedImage.kf_setImageWithURL(urlImage)
-            imgFeedImage.layer.masksToBounds = true
+            //imgFeedImage.kf_showIndicatorWhenLoading = true
+            //imgFeedImage.kf_indicatorType = .activity
+            //imgFeedImage.kf_setImageWithURL(urlImage)
+            //imgFeedImage.layer.masksToBounds = true
         }
         
         if let strImgUrl = currentFeed.createdByUser?.profileURL, let urlImage = URL(string: strImgUrl) {
-            imgUserProfile.kf_setImageWithURL(urlImage, placeholderImage: UIImage(named: "no_profile"), optionsInfo: [.transition(ImageTransition.fade(1))])
+            imgUserProfile.kf.setImage(with: urlImage, placeholder: UIImage(named: "no_profile"), options: [.transition(ImageTransition.fade(1))])
             { (image, error, cacheType, imageURL) in
                 if let img = image {
                     self.imgUserProfile.image = img.circle
@@ -317,7 +317,7 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
             .childByAutoId()
             .updateChildValues(dictParams) { (error, reference) in
                 
-                Async.main(block: {
+                Async.main {
                     self.spinner.stopAnimating()
                     self.spinner.isHidden = true
                     self.btnSend.isHidden = false
@@ -333,7 +333,7 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
                     else {
                         self.txvNewMessage.text = ""
                     }
-                })
+                }
         }
     }
     
@@ -376,10 +376,10 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
                                 
                                 KVNProgress.dismiss()
                                 
-                                Async.main(block: {
-                                    let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while adding feed to favorite! Please try again! \n\n \(error?.localizedDescription)")
+                                Async.main {
+                                    let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while adding feed to favorite! Please try again! \n\n \(String(describing: error?.localizedDescription))")
                                     self.present(alert, animated: true, completion: nil)
-                                })
+                                }
                                 
                                 return
                             }
@@ -398,7 +398,7 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
                         return
                     }
                     
-                    Async.main(block: {
+                    Async.main {
                         //=>    Ask current user if wants to remove from favorites
                         let alert = UIAlertController(title: "Remove feed?",  message: "Are you sure you want to remove this feed from favorites?", preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
@@ -415,10 +415,10 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
                                         
                                         KVNProgress.dismiss()
                                         
-                                        Async.main(block: {
-                                            let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while remove feed from favorite! Please try again! \n\n \(error?.localizedDescription)")
+                                        Async.main {
+                                            let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while remove feed from favorite! Please try again! \n\n \(String(describing: error?.localizedDescription))")
                                             self.present(alert, animated: true, completion: nil)
-                                        })
+                                        }
                                         
                                         return
                                     }
@@ -430,7 +430,7 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
                         }))
                         
                         self.present(alert, animated:true, completion:nil)
-                    })
+                    }
                 }
         })
     }
@@ -501,9 +501,9 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
         }
         
         if let strImgUrl = currentFeed.imgURL, let urlImage = URL(string: strImgUrl) {
-            imgFeedImage.kf_showIndicatorWhenLoading = true
-            imgFeedImage.kf_indicatorType = .activity
-            imgFeedImage.kf_setImageWithURL(urlImage)
+            //imgFeedImage.kf_showIndicatorWhenLoading = true
+            //imgFeedImage.kf_indicatorType = .activity
+            //imgFeedImage.kf_setImageWithURL(urlImage)
             imgFeedImage.layer.masksToBounds = true
         }
     }
@@ -577,7 +577,7 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
             
             //=>    Set profile image
             if let strProfileURL = userCreatorMessage.profileURL, let urlProfileImage = URL(string: strProfileURL) {
-                cell.imgUserProfile.kf_setImageWithURL(urlProfileImage, placeholderImage: UIImage(named: "no_profile"), optionsInfo: [.transition(ImageTransition.fade(1))])
+                cell.imgUserProfile.kf.setImage(with: urlProfileImage, placeholder: UIImage(named: "no_profile"), options: [.transition(ImageTransition.fade(1))])
                 { (image, error, cacheType, imageURL) in
                     if let img = image {
                         cell.imgUserProfile.image = img.circle
@@ -639,7 +639,7 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
             addNewMessage()
         }
         else {
-            Async.main(after: 0.01, block: {
+            Async.main(after: 0.01, {
                 self.didChangeText()
             })
         }

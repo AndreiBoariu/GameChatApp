@@ -382,7 +382,7 @@ class VXFeedsVC: VXBaseVC, VXFeedProfileCellDelegate, WYPopoverControllerDelegat
                     }
                     
                     if let strProfileURL = currentFeed.createdByUser?.profileURL, let urlProfileImage = URL(string: strProfileURL) {
-                        cell.imgUserProfile.kf_setImageWithURL(urlProfileImage, placeholderImage: UIImage(named: "no_profile"), optionsInfo: [.transition(ImageTransition.fade(1))])
+                        cell.imgUserProfile.kf.setImage(with: urlProfileImage, placeholder: UIImage(named: "no_profile"), options: [.transition(ImageTransition.fade(1))])
                         { (image, error, cacheType, imageURL) in
                             if let img = image {
                                 cell.imgUserProfile.image = img.circle

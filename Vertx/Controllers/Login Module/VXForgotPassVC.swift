@@ -61,8 +61,8 @@ class VXForgotPassVC: VXBaseVC {
                     if let error = error {
                         KVNProgress.dismiss()
                         
-                        Async.main(block: {
-                            if error.code == 17011 {
+                        Async.main {
+                            if error._code == 17011 {
                                 //=>    FIRAuthErrorCodeUserNotFound
                                 let alert = VertxUtils.okCustomAlert("Oops!", message: "No user found with this email")
                                 self.present(alert, animated: true, completion: nil)
@@ -71,7 +71,7 @@ class VXForgotPassVC: VXBaseVC {
                                 let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while sending email to change password! Please try again! \n\n \(error.localizedDescription)")
                                 self.present(alert, animated: true, completion: nil)
                             }
-                        })
+                        }
                         
                         return
                     }

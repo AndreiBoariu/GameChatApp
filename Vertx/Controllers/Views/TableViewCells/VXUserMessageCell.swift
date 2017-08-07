@@ -42,9 +42,9 @@ class VXUserMessageCell: UITableViewCell {
                         self.setProfileImage(urlProfileImage)
                     }
                     else {
-                        Async.main(block: { 
+                        Async.main {
                             self.imgUserProfile.image = UIImage(named: "profile_icon")
-                        })
+                        }
                     }
                 }
             })
@@ -52,7 +52,7 @@ class VXUserMessageCell: UITableViewCell {
     }
     
     fileprivate func setProfileImage(_ urlImage: URL!) {
-        imgUserProfile.kf_setImageWithURL(urlImage, placeholderImage: UIImage(named: "no_profile"), optionsInfo: [.transition(ImageTransition.fade(1))])
+        imgUserProfile.kf.setImage(with: urlImage, placeholder: UIImage(named: "no_profile"), options: [.transition(ImageTransition.fade(1))])
         { (image, error, cacheType, imageURL) in
             if let img = image {
                 self.imgUserProfile.image = img.circle

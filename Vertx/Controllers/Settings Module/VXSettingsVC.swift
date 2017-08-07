@@ -36,8 +36,8 @@ class VXSettingsVC: VXBaseVC, UITableViewDelegate, UITableViewDataSource {
             do {
                 try FIRAuth.auth()?.signOut()
                 
-                ImageCache.defaultCache.clearDiskCache()
-                ImageCache.defaultCache.clearMemoryCache()
+                //ImageCache.defaultCache.clearDiskCache()
+                //ImageCache.defaultCache.clearMemoryCache()
                 
                 appDelegate.curUser = nil
                 
