@@ -90,7 +90,7 @@ class VXChatVC: VXBaseVC {
         
         Async.background {
             if let strImgUrl = selectedUser.profileURL, let urlImage = URL(string: strImgUrl) {
-                KingfisherManager.sharedManager.retrieveImageWithURL(urlImage, optionsInfo: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, imageURL) in
+                KingfisherManager.shared.retrieveImage(with: urlImage, options: nil, progressBlock: nil, completionHandler: { (image, error, chachetype, imageURL) in
                     if let img = image {
                         self.lblTitle.addUserProfileImage(img, andUserName: selectedUser.name!, andAppendText: nil)
                     }
@@ -224,7 +224,7 @@ class VXChatVC: VXBaseVC {
         
         childChatMessagesRef.updateChildValues(dictValues) { (error, reference) in
             
-            Async.main(block: {
+            Async.main {
                 self.spinner.stopAnimating()
                 self.spinner.isHidden = true
                 self.btnSend.isHidden = false
@@ -239,7 +239,7 @@ class VXChatVC: VXBaseVC {
                 else {
                     self.txvNewMessage.text = ""
                 }
-            })
+            }
             
             //=>    Save info about users
             let userMessagesRef = FIRDatabase.database().reference().child(Constants.UserMessageKeys.userMessages).child(fromUserID).child(toUserID)
@@ -321,7 +321,7 @@ class VXChatVC: VXBaseVC {
             sendMessage_APICall()
         }
         else {
-            Async.main(after: 0.01, block: { 
+            Async.main(after: 0.01, {
                 self.didChangeText()
             })
         }

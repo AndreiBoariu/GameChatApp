@@ -72,10 +72,10 @@ class VXAddEditFeedVC: VXBaseVC, WYPopoverControllerDelegate, PopoverWithTableVi
         //=>    Call with delay to update ui correctly
         Async.background(after: 0.2) {
             if let strFeedImageURL = currentFeed.imgURL, let urlFeedImage = URL(string: strFeedImageURL) {
-                self.btnChangeImage.kf_setImageWithURL(urlFeedImage,
-                                                       forState: UIControlState(),
-                                                       placeholderImage: UIImage(named: "no_profile"),
-                                                       optionsInfo: [.transition(ImageTransition.fade(1))]) { (image, error, cacheType, imageURL) in
+                self.btnChangeImage.kf.setImage(with: urlFeedImage,
+                                                for: UIControlState(),
+                                                placeholder: UIImage(named: "no_profile"),
+                                                options: [.transition(ImageTransition.fade(1))]) { (image, error, cacheType, imageURL) in
                                                         
                     self.btnChangeImage.layer.cornerRadius = self.btnChangeImage.height / 2
                     self.btnChangeImage.imageView?.contentMode = .scaleAspectFill
@@ -174,10 +174,10 @@ class VXAddEditFeedVC: VXBaseVC, WYPopoverControllerDelegate, PopoverWithTableVi
                                         
                                         KVNProgress.dismiss()
                                         
-                                        Async.main(block: {
-                                            let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while uploading feed image! Please try again! \n\n \(error?.localizedDescription)")
+                                        Async.main {
+                                            let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while uploading feed image! Please try again! \n\n \(String(describing: error?.localizedDescription))")
                                             self.present(alert, animated: true, completion: nil)
-                                        })
+                                        }
                                         
                                         return
                                     }
@@ -234,10 +234,10 @@ class VXAddEditFeedVC: VXBaseVC, WYPopoverControllerDelegate, PopoverWithTableVi
                 
                 KVNProgress.dismiss()
                 
-                Async.main(block: {
-                    let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while creating new feed! Please try again! \n\n \(error?.localizedDescription)")
+                Async.main {
+                    let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while creating new feed! Please try again! \n\n \(String(describing: error?.localizedDescription))")
                     self.present(alert, animated: true, completion: nil)
-                })
+                }
                 
                 return
             }
@@ -292,10 +292,10 @@ class VXAddEditFeedVC: VXBaseVC, WYPopoverControllerDelegate, PopoverWithTableVi
                                                 
                                                 KVNProgress.dismiss()
                                                 
-                                                Async.main(block: {
+                                                Async.main {
                                                     let alert = VertxUtils.okCustomAlert("Oops!", message: "Something wrong happened while update feed image! Please try again! \n\n \(error.localizedDescription)")
                                                     self.present(alert, animated: true, completion: nil)
-                                                })
+                                                }
                                                 
                                                 return
                                             }
@@ -309,10 +309,10 @@ class VXAddEditFeedVC: VXBaseVC, WYPopoverControllerDelegate, PopoverWithTableVi
                                                     
                                                     KVNProgress.dismiss()
                                                     
-                                                    Async.main(block: {
-                                                        let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while uploading feed image! Please try again! \n\n \(error?.localizedDescription)")
+                                                    Async.main {
+                                                        let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while uploading feed image! Please try again! \n\n \(String(describing: error?.localizedDescription))")
                                                         self.present(alert, animated: true, completion: nil)
-                                                    })
+                                                    }
                                                     
                                                     return
                                                 }
@@ -336,10 +336,10 @@ class VXAddEditFeedVC: VXBaseVC, WYPopoverControllerDelegate, PopoverWithTableVi
                                 else {
                                     KVNProgress.dismiss()
                                     
-                                    Async.main(block: {
+                                    Async.main {
                                         let alert = VertxUtils.okCustomAlert("Oops!", message: "Something wrong happened while transform feed image format! Please try again!")
                                         self.present(alert, animated: true, completion: nil)
-                                    })
+                                    }
                                     
                                     return
                                 }
@@ -389,10 +389,10 @@ class VXAddEditFeedVC: VXBaseVC, WYPopoverControllerDelegate, PopoverWithTableVi
                 
                 KVNProgress.dismiss()
                 
-                Async.main(block: {
-                    let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while editing feed! Please try again! \n\n \(error?.localizedDescription)")
+                Async.main {
+                    let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while editing feed! Please try again! \n\n \(String(describing: error?.localizedDescription))")
                     self.present(alert, animated: true, completion: nil)
-                })
+                }
                 
                 return
             }
@@ -466,10 +466,10 @@ class VXAddEditFeedVC: VXBaseVC, WYPopoverControllerDelegate, PopoverWithTableVi
                         
                         KVNProgress.dismiss()
                         
-                        Async.main(block: {
+                        Async.main {
                             let alert = VertxUtils.okCustomAlert("Oops!", message: "Something wrong happened while delete feed image! Please try again! \n\n \(error.localizedDescription)")
                             self.present(alert, animated: true, completion: nil)
-                        })
+                        }
                         
                         return
                     }
@@ -482,10 +482,10 @@ class VXAddEditFeedVC: VXBaseVC, WYPopoverControllerDelegate, PopoverWithTableVi
                             
                             KVNProgress.dismiss()
                             
-                            Async.main(block: {
+                            Async.main {
                                 let alert = VertxUtils.okCustomAlert("Oops!", message: "Something wrong happened while delete feed! Please try again! \n\n \(error.localizedDescription)")
                                 self.present(alert, animated: true, completion: nil)
-                            })
+                            }
                             
                             return
                         }

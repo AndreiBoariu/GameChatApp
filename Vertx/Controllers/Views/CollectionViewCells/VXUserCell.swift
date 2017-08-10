@@ -32,13 +32,13 @@ class VXUserCell: UICollectionViewCell {
     }
     
     func setDistanceLabelTextInKm(_ dDistance: Double?) {
-        if let dUserDistance = dDistance {
+        if let  dUserDistance = dDistance {
             if dUserDistance == DBL_MAX {
                 lblUserDistance.text = "no location set"
             }
             else {
-                let km = (dUserDistance / 1000.0).roundToPlaces(2)
-                lblUserDistance.text = "\(km) km"
+//                let km = (dUserDistance / 1000.0).roundToPlaces(2)
+//                lblUserDistance.text = "\(km) km"
             }
         }
     }

@@ -219,7 +219,7 @@ class VXMyProfileVC: VXBaseVC, WYPopoverControllerDelegate, PopoverWithTableView
                 KVNProgress.dismiss()
                 
                 Async.main {
-                    let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while editing profile! Please try again! \n\n \(error?.localizedDescription)")
+                    let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while editing profile! Please try again! \n\n \(String(describing: error?.localizedDescription))")
                     self.present(alert, animated: true, completion: nil)
                 }
                 
@@ -296,7 +296,7 @@ class VXMyProfileVC: VXBaseVC, WYPopoverControllerDelegate, PopoverWithTableView
                 KVNProgress.dismiss()
                 
                 Async.main {
-                    let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while uploading feed image! Please try again! \n\n \(error?.localizedDescription)")
+                    let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while uploading feed image! Please try again! \n\n \(String(describing: error?.localizedDescription))")
                     self.present(alert, animated: true, completion: nil)
                 }
             
@@ -310,7 +310,7 @@ class VXMyProfileVC: VXBaseVC, WYPopoverControllerDelegate, PopoverWithTableView
                 FIRDatabase.database().reference().child(Constants.UserKeys.users).child(strUserID).updateChildValues(dictInfo) { (error, reference) in
                     if error != nil {
                         Async.main {
-                            let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while editing profile! Please try again! \n\n \(error?.localizedDescription)")
+                            let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while editing profile! Please try again! \n\n \(String(describing: error?.localizedDescription))")
                             self.present(alert, animated: true, completion: nil)
                         }
                         

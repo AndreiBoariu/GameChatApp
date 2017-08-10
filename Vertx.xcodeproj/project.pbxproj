@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29546BADEFEF3757617633C5 /* Pods_Vertx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A33F9D498CDF3EB16FC80248 /* Pods_Vertx.framework */; };
+		4E26F76E1F3A253F00704281 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E26F76D1F3A253F00704281 /* GoogleService-Info.plist */; };
 		AF2A16121D6EF32800196797 /* VXNearByVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2A16111D6EF32800196797 /* VXNearByVC.swift */; };
 		AF2A16141D70F03300196797 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2A16131D70F03300196797 /* User.swift */; };
 		AF2A16161D710BDC00196797 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2A16151D710BDC00196797 /* SessionManager.swift */; };
@@ -39,7 +40,6 @@
 		AF48DA271D64C0E900683E6C /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF48D9FF1D64C0E900683E6C /* OpenSans-Regular.ttf */; };
 		AF48DA281D64C0E900683E6C /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF48DA001D64C0E900683E6C /* OpenSans-Semibold.ttf */; };
 		AF48DA291D64C0E900683E6C /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF48DA011D64C0E900683E6C /* OpenSans-SemiboldItalic.ttf */; };
-		AF48DA2B1D64C0E900683E6C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF48DA031D64C0E900683E6C /* GoogleService-Info.plist */; };
 		AF48DA2C1D64C0E900683E6C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48DA051D64C0E900683E6C /* Constants.swift */; };
 		AF48DA2D1D64C0E900683E6C /* VertxUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48DA061D64C0E900683E6C /* VertxUtils.swift */; };
 		AF48DA2E1D64C0E900683E6C /* NSURL+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = AF48DA0A1D64C0E900683E6C /* NSURL+Parameters.m */; };
@@ -79,6 +79,7 @@
 
 /* Begin PBXFileReference section */
 		395954C7E6EBEB7A5A7D6737 /* Pods-Vertx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vertx.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vertx/Pods-Vertx.release.xcconfig"; sourceTree = "<group>"; };
+		4E26F76D1F3A253F00704281 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		76F6A056BC78635BD4FF7323 /* Pods-Vertx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vertx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vertx/Pods-Vertx.debug.xcconfig"; sourceTree = "<group>"; };
 		A33F9D498CDF3EB16FC80248 /* Pods_Vertx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vertx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2A16111D6EF32800196797 /* VXNearByVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VXNearByVC.swift; sourceTree = "<group>"; };
@@ -115,7 +116,6 @@
 		AF48D9FF1D64C0E900683E6C /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		AF48DA001D64C0E900683E6C /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		AF48DA011D64C0E900683E6C /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
-		AF48DA031D64C0E900683E6C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF48DA051D64C0E900683E6C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AF48DA061D64C0E900683E6C /* VertxUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VertxUtils.swift; sourceTree = "<group>"; };
 		AF48DA091D64C0E900683E6C /* NSURL+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Parameters.h"; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 				AF48D9E11D64BDE800683E6C /* Assets.xcassets */,
 				AF48D9E61D64BDE800683E6C /* Info.plist */,
 				AF48D9ED1D64BFB800683E6C /* Vertx-Bridging-Header.h */,
-				AF48DA031D64C0E900683E6C /* GoogleService-Info.plist */,
+				4E26F76D1F3A253F00704281 /* GoogleService-Info.plist */,
 			);
 			path = Vertx;
 			sourceTree = "<group>";
@@ -531,8 +531,8 @@
 				TargetAttributes = {
 					AF48D9D61D64BDE800683E6C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 44WVVSJU55;
 						LastSwiftMigration = 0830;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -561,7 +561,6 @@
 			files = (
 				AF48DA281D64C0E900683E6C /* OpenSans-Semibold.ttf in Resources */,
 				AF48DA291D64C0E900683E6C /* OpenSans-SemiboldItalic.ttf in Resources */,
-				AF48DA2B1D64C0E900683E6C /* GoogleService-Info.plist in Resources */,
 				AF48D9E51D64BDE800683E6C /* LaunchScreen.storyboard in Resources */,
 				AF48DA271D64C0E900683E6C /* OpenSans-Regular.ttf in Resources */,
 				AF48DA241D64C0E900683E6C /* OpenSans-Italic.ttf in Resources */,
@@ -573,6 +572,7 @@
 				AF48DA251D64C0E900683E6C /* OpenSans-Light.ttf in Resources */,
 				AF48DA211D64C0E900683E6C /* OpenSans-BoldItalic.ttf in Resources */,
 				AF48DA221D64C0E900683E6C /* OpenSans-ExtraBold.ttf in Resources */,
+				4E26F76E1F3A253F00704281 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,7 +814,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Derek Nebel (X35U8N47CC)";
-				DEVELOPMENT_TEAM = 44WVVSJU55;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/Headers",
@@ -838,10 +839,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vima.mobile;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gameChat.mobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e80aa77c-79e3-44a5-920c-a83825c41d63";
-				PROVISIONING_PROFILE_SPECIFIER = Vima_AdHoc;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vertx/Vertx-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -853,7 +854,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Derek Nebel (J2U4YW39Q7)";
-				DEVELOPMENT_TEAM = 44WVVSJU55;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/Headers",
@@ -876,10 +878,10 @@
 				INFOPLIST_FILE = Vertx/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vima.mobile;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gameChat.mobile;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "e80aa77c-79e3-44a5-920c-a83825c41d63";
-				PROVISIONING_PROFILE_SPECIFIER = Vima_AdHoc;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Vertx/Vertx-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

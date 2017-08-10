@@ -199,7 +199,7 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
             lblFeedDate.text = VertxUtils.getStringDateAndTimeFromCreatedStringDate(strCreatedDate)
         }
         
-        if let strImgUrl = currentFeed.imgURL, let urlImage = URL(string: strImgUrl) {
+        if let strImgUrl = currentFeed.imgURL, let _ = URL(string: strImgUrl) {
             //imgFeedImage.kf_showIndicatorWhenLoading = true
             //imgFeedImage.kf_indicatorType = .activity
             //imgFeedImage.kf_setImageWithURL(urlImage)
@@ -324,7 +324,7 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
                     
                     if error != nil {
                         
-                        let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while posting new message! Please try again! \n\n \(error?.localizedDescription)")
+                        let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while posting new message! Please try again! \n\n \(String(describing: error?.localizedDescription))")
                         self.present(alert, animated: true, completion: nil)
                         
                         
@@ -500,7 +500,7 @@ class VXFeedDetailsVC: VXBaseVC, VXMessageCellDelegate {
             lblFeedDate.text = VertxUtils.getStringDateAndTimeFromCreatedStringDate(strCreatedDate)
         }
         
-        if let strImgUrl = currentFeed.imgURL, let urlImage = URL(string: strImgUrl) {
+        if let strImgUrl = currentFeed.imgURL, let _ = URL(string: strImgUrl) {
             //imgFeedImage.kf_showIndicatorWhenLoading = true
             //imgFeedImage.kf_indicatorType = .activity
             //imgFeedImage.kf_setImageWithURL(urlImage)

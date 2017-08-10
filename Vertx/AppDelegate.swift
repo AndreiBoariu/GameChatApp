@@ -120,7 +120,7 @@ extension UIApplication {
     class func versionBuild() -> String {
         let version = appVersion(), build = appBuild()
         
-        return version == build ? "v\(version)" : "v\(version)(\(build))"
+        return version == build ? "v\(String(describing: version))" : "v\(version)(\(build))"
     }
 }
 

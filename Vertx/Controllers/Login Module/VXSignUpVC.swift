@@ -240,7 +240,7 @@ class VXSignUpVC: VXBaseVC {
                 KVNProgress.dismiss()
                 
                 Async.main {
-                    let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while creating new user! Please try again! \n\n \(error?.localizedDescription)")
+                    let alert = VertxUtils.okCustomAlert("Oops!", message: "Something bad happened while creating new user! Please try again! \n\n \(String(describing: error?.localizedDescription))")
                     self.present(alert, animated: true, completion: nil)
                 }
                 

@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>57341338292-sr1tgqgi8falo86p30h26s096fk8npup.apps.googleusercontent.com</string>
+	<string>1076629744914-r00unc3mprnv9jummv6efb7gvbs84tgb.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.57341338292-sr1tgqgi8falo86p30h26s096fk8npup</string>
+	<string>com.googleusercontent.apps.1076629744914-r00unc3mprnv9jummv6efb7gvbs84tgb</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCKOl4O1oZNqQ_LOUOThCUCROSwAmGHtug</string>
+	<string>AIzaSyB2TbfmxDTy3IvnYPe_r-UYRjQb_jziGns</string>
 	<key>GCM_SENDER_ID</key>
-	<string>57341338292</string>
+	<string>1076629744914</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.nebel.vertx</string>
+	<string>com.gameChat.mobile</string>
 	<key>PROJECT_ID</key>
-	<string>vertx-8a172</string>
+	<string>vertx-d49de</string>
 	<key>STORAGE_BUCKET</key>
-	<string>vertx-8a172.appspot.com</string>
+	<string>vertx-d49de.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:57341338292:ios:e68aae096206c7b9</string>
+	<string>1:1076629744914:ios:5fc443243aaf5953</string>
 	<key>DATABASE_URL</key>
-	<string>https://vertx-8a172.firebaseio.com</string>
+	<string>https://vertx-d49de.firebaseio.com</string>
 </dict>
 </plist>
