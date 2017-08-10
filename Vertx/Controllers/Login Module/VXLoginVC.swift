@@ -31,7 +31,7 @@ class VXLoginVC: VXBaseVC {
         #if DEBUG
             txfEmail.text = "boariu.andrey@gmail.com"
             //txfEmail.text = "naomi.boariu@gmail.com"
-            txfPassword.text = "Andrei9011"
+            txfPassword.text = "qwerty"
         #endif
         
         //=>    Setup UI
